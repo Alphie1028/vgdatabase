@@ -10,22 +10,23 @@ function App() {
   return (
     <>
       <Header />
-      {platform || searchGame !== false ? (
-        data.results.map((game) => (
-          <Gamecard
-            key={game.id}
-            name={game.name}
-            image={game.background_image}
-            score={game.metacritic}
-            esrb={game.esrb_rating}
-            genres={game.genres}
-            platforms={game.platforms}
-            release={game.released}
-          />
-        ))
-      ) : (
-        <p>No platform selected.</p>
-      )}
+      <div className="cardContainer">
+        {platform || searchGame !== false ? (
+          data.results.map((game) => (
+            <Gamecard
+              key={game.id}
+              name={game.name}
+              image={game.background_image}
+              score={game.metacritic}
+              genres={game.genres}
+              platforms={game.platforms}
+              release={game.released}
+            />
+          ))
+        ) : (
+          <p>No platform selected.</p>
+        )} 
+      </div>
     </>
   )
 }

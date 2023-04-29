@@ -1,0 +1,19 @@
+.card{
+    flex-basis: 20%;
+    background: #4d4a6e;
+    max-width: 300px;
+    max-height: 600px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+    text-align: center;
+    color: #ddd;
+}
+.cardImg{
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+}
+.card:hover{
+    background:#5b587d;
+}
