@@ -12,12 +12,23 @@ function Gamecard({name, image, score, genres, platforms, release}){
                     {name}
                 </h2>
                 <h4>Release Date: {release}</h4>
-                <h5>
-                    {genres.map((genre) => (
-                        <span key={genre.id}>{genre.name},</span>
+                <h5> {'Genres: '}
+                    {genres.map((genre, index) => (
+                        <span key={genre.id}>
+                            {genre.name}
+                            {index !== genres.length - 1 && ", "}
+                        </span>
                     ))}
                 </h5>
                 <h5>Meta Critic Score: {score}</h5>
+                <h5>{'Platforms: '}
+                    {platforms.map((platform, index) => (
+                        <span key={platform.platform.id}>
+                            {platform.platform.name}
+                            {index !== platforms.length - 1 && ", "}
+                        </span>
+                    ))}
+                </h5>
             </div>
         </div>
     )

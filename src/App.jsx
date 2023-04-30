@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import Header from './components/Header'
 import Gamecard from './components/Gamecard'
 import Context from './context/Context'
+import Navigation from './components/Navigation'
 
 function App() {
   const {data, platform, searchGame} = useContext(Context);
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <Header />
+      <Navigation />
       <div className="cardContainer">
         {platform || searchGame !== false ? (
           data.results.map((game) => (
