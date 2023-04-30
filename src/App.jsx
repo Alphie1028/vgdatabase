@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header />
-      <Navigation />
+      {platform || searchGame !== false ?(<Navigation/>):(<></>)}
       <div className="cardContainer">
         {platform || searchGame !== false ? (
           data.results.map((game) => (
@@ -29,6 +29,7 @@ function App() {
           <p>No platform selected.</p>
         )} 
       </div>
+      {platform || searchGame !== false ? (<Navigation />) : (<></>)}
     </>
   )
 }
