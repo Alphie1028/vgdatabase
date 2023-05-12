@@ -9,13 +9,13 @@ function Navigation(){
 
     return(
         <div className="navBar">
-            {data.previous !== null ? (<button onClick={() => handleBack(data.previous)}>Back</button>):(<button>nope</button>)}
+            {data.previous !== null ? (<div className="navBtn"onClick={() => handleBack(data.previous)}>Back</div>):(<></>)}
             {pageNumbers.map((page) => (
-                <button key={page} onClick={() => handlePage(page)}>
+                <div className="pageBtn" key={page} onClick={() => handlePage(page)}>
                     {page}
-                </button>
+                </div>
             ))}
-            <button onClick={()=> handleNext(data.next)}>Next</button>
+            <div className="navBtn"onClick={()=> handleNext(data.next)}>Next</div>
         </div>
     )
 }
